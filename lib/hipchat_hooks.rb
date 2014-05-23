@@ -116,7 +116,7 @@ class NotificationHook < Redmine::Hook::Listener
     })
     req["Content-Type"] = 'application/x-www-form-urlencoded'
 
-    http = Net::HTTP.new("api.hipchat.com", 443)
+    http = Net::HTTP.new("#{Setting[:server]}", 443)
     http.use_ssl = true
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     begin

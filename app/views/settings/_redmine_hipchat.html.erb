@@ -1,4 +1,10 @@
 <p>
+  <%= content_tag(:label, l(:hipchat_settings_label_server)) %>
+  <%= text_field_tag 'settings[server]', @settings[:server] %>
+  The hostname of the hipchat server.
+</p>
+
+<p>
   <%= content_tag(:label, l(:hipchat_settings_label_auth_token)) %>
   <%= text_field_tag 'settings[auth_token]', @settings[:auth_token] %>
   A token from <a href="https://www.hipchat.com/group_admin/api" target="_blank">your API tokens page</a>.
